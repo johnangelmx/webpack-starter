@@ -6,6 +6,10 @@ module.exports = {
   output: {
     clean: true,
   },
+  devServer: {
+    hot: false, // optional, but you must not set both hot and liveReload to true
+    liveReload: true
+  },
   module: {
     rules: [
       {
@@ -37,7 +41,7 @@ module.exports = {
   optimization: {},
   plugins: [
     new HtmlWebpack({
-      title: "Mi Webpack App",
+      // title: "Mi Webpack App",
       //   filename: "index.html",
       template: "src/index.html",
     }),
